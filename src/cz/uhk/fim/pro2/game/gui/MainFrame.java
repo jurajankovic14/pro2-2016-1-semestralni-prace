@@ -10,21 +10,20 @@ public class MainFrame extends JFrame {
 	protected Screen actualScreen;
 	
 	public MainFrame(){
-		setSize(WIDTH, HEIGHT);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(WIDTH,HEIGHT);
 		setVisible(true);
-		setTitle("Flappy Bird");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setTitle("Flappy Bird Pro2");
 		setResizable(false);
 	}
 	
 	public void setScreen(Screen screen){
-		if (actualScreen != null){
+		if (actualScreen !=null){
 			remove(actualScreen);
 		}
-		add(screen);
 		actualScreen = screen;
+		add(screen);
 		revalidate();
 	}
-	
-	
+
 }

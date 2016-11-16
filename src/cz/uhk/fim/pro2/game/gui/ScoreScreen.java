@@ -6,13 +6,13 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 public class ScoreScreen extends Screen {
-
 	public ScoreScreen(MainFrame mainFrame){
 		super(mainFrame);
 		
-		JButton jButtonBack = new JButton("Back");
-		
-		jButtonBack.addActionListener(new ActionListener() {
+		JButton back = new JButton("BACK");
+		add(back);
+		back.setBounds(20,20,60,60);
+		back.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -20,7 +20,6 @@ public class ScoreScreen extends Screen {
 				
 			}
 		});
-		
-		add(jButtonBack); 
 	}
+
 }
